@@ -129,4 +129,4 @@ position = Vector2(73, 41)
 scale = Vector2(0.420715, 0.474875)
 sprite_frames = SubResource("SpriteFrames_reatw")
 animation = &"right"
-frame_progress = 0.762255
+frame_progress = 0.30504
