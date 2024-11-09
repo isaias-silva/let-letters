@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcgg4p2f0xvjt"]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_xtx25"]
+[ext_resource type="PackedScene" uid="uid://ulniixsl72qk" path="res://scenes/sprite_default.tscn" id="2_m4j5a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_reopf"]
+size = Vector2(38, 60)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(24, 28)
+script = ExtResource("1_xtx25")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(70, 37)
+shape = SubResource("RectangleShape2D_reopf")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_m4j5a")]
+position = Vector2(70, 40)
+scale = Vector2(0.321928, 0.338416)
+animation = &"back"

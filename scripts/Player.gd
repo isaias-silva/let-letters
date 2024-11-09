@@ -6,7 +6,9 @@ func _ready():
 	animation.play("main");
 	
 func _physics_process(delta):
+	
 	var dx = Input.get_axis("ui_left", "ui_right")
+	
 	if dx:
 		velocity.x = dx * SPEED
 		if(dx>0):
@@ -18,7 +20,7 @@ func _physics_process(delta):
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 	var dy = Input.get_axis("ui_up","ui_down")
 	if dy:
-		print(dy)
+	
 		velocity.y=dy*SPEED
 		if(dy<0):
 			animation.play("back")
@@ -31,6 +33,7 @@ func _physics_process(delta):
 	if(velocity==Vector2(0,0)):
 		animation.set_frame_and_progress(1,0)
 		animation.stop();
-	print(velocity)
+	
 	if(abs(velocity.x)!=abs(velocity.y)):
 		move_and_slide()
+	
